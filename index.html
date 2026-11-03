@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8"><title>Kenali Buah dan Sayur Lokal</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>
+:root{--bg:#f6faf5;--fg:#10281c;--card:#fff;--mut:#456a55;--ln:#cfe3d3;--or:#f48c25;--gr:#2e7d32;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0e1a14;--fg:#eaf5ec;--card:#16271e;--mut:#a9c4b2;--ln:#2b4636}}
+:root[data-theme=dark]{--bg:#0e1a14;--fg:#eaf5ec;--card:#16271e;--mut:#a9c4b2;--ln:#2b4636}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+html,body{height:100%;margin:0}body{background:var(--bg);color:var(--fg);font:16px/1.4 "Nunito","Trebuchet MS",system-ui,sans-serif}
+[hidden]{display:none!important}
+*{box-sizing:border-box}
+.s{display:none;flex-direction:column;gap:14px;min-height:100%;padding:20px 22px}.s.on{display:flex}
+.dk{background:#133b29;color:#eaf5ec}.lt{background:var(--bg);color:var(--fg)}
+h1{font-size:40px;line-height:1.05;margin:4px 0;font-weight:900}h2,h3{margin:0}
+.kick{color:#8fd9a8;font-weight:800;letter-spacing:.08em}
+.hero{font-size:54px;text-align:center;margin:auto 0;letter-spacing:8px}
+.b{border:0;border-radius:18px;padding:17px;font:800 17px "Nunito",system-ui,sans-serif;width:100%;cursor:pointer}
+.or{background:var(--or);color:#12281c}.ol{background:none;border:2px solid #5fbf80;color:#eaf5ec}.wh{background:#f6faf5;color:#10281c}.gn{background:var(--gr);color:#fff}
+.hd{display:flex;align-items:center;gap:12px;font-weight:800}
+.rb{width:44px;height:44px;border-radius:50%;border:0;background:rgba(127,170,140,.28);color:inherit;font-size:26px;cursor:pointer}
+.vf{position:relative;width:100%;aspect-ratio:1;border:4px solid var(--or);border-radius:28px;overflow:hidden;background:#0b2519}
+.vf video{width:100%;height:100%;object-fit:cover}
+.note{background:#0e2c1e;border-radius:14px;padding:14px}
+input{width:100%;padding:14px;border-radius:14px;border:2px solid var(--ln);background:var(--card);color:var(--fg);font:inherit}
+.ch{display:flex;gap:8px}.ch button{border:0;border-radius:99px;padding:10px 16px;font:800 15px inherit;background:var(--ln);color:var(--fg)}.ch .on{background:var(--gr);color:#fff}
+.g{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.it{display:flex;flex-direction:column;align-items:center;gap:8px;padding:14px 4px;border:2px solid var(--ln);border-radius:18px;background:var(--card);color:var(--fg);font:800 14px inherit;cursor:pointer}
+.it i{width:34px;height:34px;border-radius:50%;box-shadow:inset -5px -5px 0 rgba(0,0,0,.14)}
+.cg{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.cd{background:#fff;color:#10281c;border:4px solid #2e7d32;border-radius:18px;padding:12px;text-align:center;break-inside:avoid}
+.cd .q svg{width:100%;height:auto}.cd small{display:block;color:#456a55}
+.big{width:120px;height:120px;border-radius:50%;margin:8px auto;box-shadow:inset -14px -14px 0 rgba(0,0,0,.14)}
+.r{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid var(--ln)}.r span{color:var(--mut);font-weight:800}.r b{text-align:right}
+.fx{background:#ffefd1;color:#4a3412;padding:14px;border-radius:14px}
+.pg{height:8px;background:var(--ln);border-radius:9px}.pg i{display:block;height:100%;width:0;background:var(--gr);border-radius:9px;transition:width .3s}
+.op{display:block;width:100%;text-align:left;padding:16px;border-radius:16px;border:2px solid var(--ln);background:var(--card);color:var(--fg);font:800 17px inherit;margin-bottom:10px}
+.op.ok{border-color:#2e7d32;background:#dff3e0;color:#10281c}.op.no{border-color:#d33;background:#fde2e2;color:#10281c}
+.sc{background:#1e5a40;border-radius:24px;padding:22px;text-align:center}.sc b{font-size:72px;color:var(--or)}
+#ar{position:fixed;inset:0;z-index:5;background:linear-gradient(#1e5a40,#0f2f21);color:#fff;padding:calc(env(safe-area-inset-top,0px) + 12px) 14px calc(env(safe-area-inset-bottom,0px) + 12px);overflow:hidden;touch-action:none}
+#ar video,#ar canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#ar canvas{z-index:1;touch-action:none}#ar.nocam video{display:none}
+.ov{position:relative;z-index:2}
+.pill{background:rgba(19,59,41,.9);border-radius:99px;padding:12px 18px}
+.hint{background:rgba(19,59,41,.88);padding:12px 14px;border-radius:14px;text-align:center;font-weight:700}
+.bk{position:absolute;z-index:2;right:12px;top:36%;width:96px;height:96px;border-radius:20px;border:3px dashed #f6faf5;background:rgba(19,59,41,.6);text-align:center;font-size:36px;line-height:1.1;padding-top:8px}
+.bk b{display:block;font-size:15px}
+.tools{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.tools button{background:#133b29;color:#fff;border:0;border-radius:16px;padding:13px;font:800 16px inherit}.tools .on{background:var(--or);color:#12281c}
+@media print{.s:not(#cards),.nopr{display:none!important}.cg{grid-template-columns:repeat(3,1fr)}}
+</style></head><body>
+
+<div id="home" class="s dk on">
+ <div class="kick" style="margin-top:20px">APLIKASI AR EDUKASI</div>
+ <h1>Kenali Buah<br>dan Sayur<br>Lokal</h1>
+ <p style="font-size:18px">Scan kartu QR, lihat buah atau sayur muncul dalam 3D, lalu geser ke keranjang.</p>
+ <div class="hero">🍎🍊🍅🥕</div>
+ <button class="b or" onclick="go('scan')">Scan Kartu QR</button>
+ <button class="b ol" onclick="go('list')">Lihat 40 Jenis</button>
+ <button class="b ol" onclick="go('cards')">Kartu QR untuk dicetak</button>
+ <small style="text-align:center;color:#8fd9a8">Realitas Tertambah dan Realitas Maya</small>
+</div>
+
+<div id="scan" class="s dk">
+ <div class="hd"><button class="rb" onclick="bk()">‹</button>Scan Kartu QR</div>
+ <div class="vf"><video id="sv" playsinline muted></video></div>
+ <p id="sst" style="text-align:center">Arahkan kamera ke kartu QR buah atau sayur sampai terdeteksi.</p>
+ <div class="note">Satu kartu untuk satu jenis. Ada 40 kartu yang bisa discan.</div>
+ <button class="b or" onclick="openAR('jeruk')">Simulasi: kartu terdeteksi</button>
+ <button class="b ol" onclick="go('cards')">Tampilkan kartu QR di layar</button>
+</div>
+
+<div id="list" class="s lt">
+ <div class="hd"><button class="rb" onclick="bk()">‹</button>Daftar Jenis</div>
+ <h2 style="font-size:28px">40 Buah dan Sayur Lokal</h2>
+ <input placeholder="Cari buah atau sayur" oninput="q=this.value.toLowerCase();lst()">
+ <div class="ch" id="ch"></div>
+ <div class="g" id="gl"></div>
+ <p id="lc" style="text-align:center;color:var(--mut)"></p>
+</div>
+
+<div id="cards" class="s lt">
+ <div class="hd nopr"><button class="rb" onclick="bk()">‹</button>Kartu QR (40 kartu)</div>
+ <p class="nopr">Scan kartu ini dari layar lain dengan menu Scan Kartu QR, atau cetak. Kartu ini membuka halaman ini langsung di AR jenis yang dipilih.</p>
+ <button class="b gn nopr" onclick="print()">Cetak kartu</button>
+ <div class="cg" id="cg"></div>
+</div>
+
+<div id="ar" class="s">
+ <video id="av" playsinline muted></video><canvas id="cnv"></canvas>
+ <div class="ov hd"><button class="rb" onclick="bk()">‹</button><b class="pill" id="atl"></b></div>
+ <div class="ov hint" id="hint"></div>
+ <div class="bk" id="bk">🧺<b id="cnt">0 / 5</b></div>
+ <div style="flex:1;pointer-events:none"></div>
+ <div class="ov tools"><button data-m="drag" class="on">Seret</button><button data-m="cut">Potong</button><button data-m="rot">Putar</button></div>
+ <button class="ov b wh" onclick="info()">Lihat Info</button>
+ <button id="xrb" class="ov b ol" hidden onclick="startXR()">AR penuh di meja (WebXR)</button>
+</div>
+
+<div id="info" class="s lt"><div class="hd"><button class="rb" onclick="bk()">‹</button><span id="ih">Info</span></div><div id="inf"></div></div>
+
+<div id="quiz" class="s lt">
+ <div class="hd"><button class="rb" onclick="bk()">‹</button>Kuis</div>
+ <div style="display:flex;justify-content:space-between;font-weight:800;color:var(--mut)"><span id="qn"></span><span id="qs"></span></div>
+ <div class="pg"><i id="qb"></i></div>
+ <h2 id="qq" style="font-size:28px;margin:10px 0"></h2><div id="qo"></div>
+ <p style="text-align:center;color:var(--mut)">Pilih satu jawaban untuk lanjut</p>
+</div>
+
+<div id="done" class="s dk" style="justify-content:center;text-align:center">
+ <div style="font-size:80px">✅</div><h1 style="font-size:36px">Kuis Selesai!</h1>
+ <p>Terima kasih sudah belajar mengenal buah dan sayur lokal.</p>
+ <div class="sc">SKOR KAMU<br><b id="sk">0</b> / 2<br><span id="sj"></span></div>
+ <button class="b or" onclick="st=[];go('home',1)">Kembali ke Menu</button>
+ <button class="b ol" onclick="quiz()">Ulangi Kuis</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsQR/1.4.0/jsQR.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script>
+const $=i=>document.getElementById(i),Q=s=>document.querySelectorAll(s);
+// id|nama|latin|jenis|warna|bentuk|asal|kandungan
+const D=`jeruk|Jeruk|Citrus sinensis|b|f48c25|s|Asia Selatan dan Tiongkok|Vitamin C
+apel|Apel|Malus domestica|b|d64545|s|Asia Tengah|Serat
+pisang|Pisang|Musa paradisiaca|b|f2d03b|b|Asia Tenggara|Kalium
+mangga|Mangga|Mangifera indica|b|f4a62a|l|Asia Selatan|Vitamin A dan C
+semangka|Semangka|Citrullus lanatus|b|2e8b57|l|Afrika bagian selatan|Air dan likopen
+nanas|Nanas|Ananas comosus|b|d9a520|t|Amerika Selatan|Vitamin C dan bromelain
+pepaya|Pepaya|Carica papaya|b|f08a3c|l|Amerika Tengah|Vitamin A dan C
+jambu|Jambu Biji|Psidium guajava|b|9acd5a|s|Amerika Tengah|Vitamin C tinggi
+rambutan|Rambutan|Nephelium lappaceum|b|d63a3a|s|Asia Tenggara|Vitamin C
+salak|Salak|Salacca zalacca|b|8a5a3c|t|Indonesia|Serat dan kalium
+manggis|Manggis|Garcinia mangostana|b|6a2c5a|s|Asia Tenggara|Antioksidan
+durian|Durian|Durio zibethinus|b|9bb04a|l|Asia Tenggara|Energi dan kalium
+alpukat|Alpukat|Persea americana|b|4b6b2e|t|Meksiko dan Amerika Tengah|Lemak sehat
+anggur|Anggur|Vitis vinifera|b|6b3fa0|s|Asia Barat dan Kaukasus|Antioksidan
+melon|Melon|Cucumis melo|b|b6d98a|s|Asia Barat dan Afrika|Air dan vitamin A
+lemon|Lemon|Citrus limon|b|f4e04d|l|Asia Selatan|Vitamin C
+pir|Pir|Pyrus communis|b|b5c94a|t|Eropa dan Asia|Serat
+stroberi|Stroberi|Fragaria x ananassa|b|e0303f|t|Hasil silangan Eropa dan Amerika|Vitamin C
+naga|Buah Naga|Hylocereus undatus|b|d6336c|l|Amerika Tengah|Serat dan vitamin C
+belimbing|Belimbing|Averrhoa carambola|b|e8d44d|l|Asia Tenggara|Vitamin C
+tomat|Tomat|Solanum lycopersicum|s|e5502b|s|Amerika Selatan (Andes)|Likopen
+wortel|Wortel|Daucus carota|s|f7882f|c|Asia Tengah|Beta-karoten (vitamin A)
+cabai|Cabai|Capsicum annuum|s|d02a2a|c|Amerika Tengah dan Selatan|Vitamin C dan capsaicin
+terong|Terong|Solanum melongena|s|6b3a8c|l|Asia Selatan|Serat
+jagung|Jagung|Zea mays|s|eab72a|y|Meksiko|Karbohidrat dan serat
+brokoli|Brokoli|Brassica oleracea var. italica|s|3a9d5d|s|Mediterania|Vitamin C dan K
+bayam|Bayam|Amaranthus tricolor|s|2f8f46|s|Asia Selatan dan Tenggara|Zat besi dan vitamin K
+kangkung|Kangkung|Ipomoea aquatica|s|4caf50|y|Asia Tenggara|Zat besi dan vitamin A
+kol|Kol|Brassica oleracea var. capitata|s|9ccc7a|s|Eropa|Vitamin C dan K
+sawi|Sawi|Brassica juncea|s|6fbf4a|t|Asia|Vitamin K dan A
+timun|Timun|Cucumis sativus|s|3f9b4a|y|Asia Selatan|Air
+labu|Labu Kuning|Cucurbita moschata|s|e8963a|s|Amerika Tengah|Beta-karoten
+kentang|Kentang|Solanum tuberosum|s|c9a46a|l|Andes, Amerika Selatan|Karbohidrat dan kalium
+bawangmerah|Bawang Merah|Allium cepa var. aggregatum|s|a63a5a|t|Asia Tengah|Senyawa sulfur
+bawangputih|Bawang Putih|Allium sativum|s|ece6d8|s|Asia Tengah|Allicin
+buncis|Buncis|Phaseolus vulgaris|s|4a9a3a|y|Amerika Tengah|Serat dan protein
+kacangpanjang|Kacang Panjang|Vigna unguiculata subsp. sesquipedalis|s|3f8f3f|y|Afrika|Serat dan folat
+singkong|Singkong|Manihot esculenta|s|b58a5a|c|Amerika Selatan|Karbohidrat
+lobak|Lobak|Raphanus sativus|s|f0e6ea|c|Asia dan Mediterania|Vitamin C dan serat
+kembangkol|Kembang Kol|Brassica oleracea var. botrytis|s|f2eedd|s|Mediterania|Vitamin C dan K`.split('\n').map((r,i)=>{const a=r.split('|');return{i:i+1,id:a[0],n:a[1],sc:a[2],t:a[3]=='b'?'Buah':'Sayur',c:'#'+a[4],sh:a[5],o:a[6],k:a[7]}});
+
+let cur='home',st=[],flt='Semua',q='',item,mode='drag',cnt=0,cut=false,scanning=0,cs,xrS,xrOn=false,hts,R,S,C,G,reticle,dn=0,lx,ly,qs,qi,sc,qo;
+const H={drag:'Seret buah ke keranjang untuk mengumpulkannya',cut:'Ketuk buah untuk memotong dan menyatukannya lagi',rot:'Geser jari di layar untuk memutar buah'};
+const hint=t=>$('hint').textContent=t;
+
+function go(id,back){
+ if(cur=='scan'){scanning=0;stopCam()}
+ if(cur=='ar'){stopCam();xrS&&xrS.end()}
+ if(!back&&cur!=id)st.push(cur);cur=id;
+ Q('.s').forEach(e=>e.classList.toggle('on',e.id==id));scrollTo(0,0);
+ if(id=='scan')scanOn();if(id=='list')lst();if(id=='cards')cards();
+ if(id=='ar'){fit();startCam($('av')).then(ok=>$('ar').classList.toggle('nocam',!ok));
+  navigator.xr&&navigator.xr.isSessionSupported('immersive-ar').then(s=>$('xrb').hidden=!s).catch(()=>0)}
+}
+function bk(){go(st.pop()||'home',1)}
+
+async function startCam(el){try{cs=await navigator.mediaDevices.getUserMedia({video:{facingMode:'environment'}});el.srcObject=cs;await el.play();return 1}catch(e){return 0}}
+function stopCam(){cs&&cs.getTracks().forEach(t=>t.stop());cs=null}
+
+async function scanOn(){
+ const v=$('sv');scanning=1;
+ if(!await startCam(v)){$('sst').textContent='Kamera tidak bisa dibuka. Izinkan akses kamera, atau pakai tombol simulasi.';return}
+ $('sst').textContent='Arahkan kamera ke kartu QR buah atau sayur sampai terdeteksi.';
+ const c=document.createElement('canvas'),x=c.getContext('2d',{willReadFrequently:true});
+ (function tick(){
+  if(!scanning)return;
+  if(v.videoWidth&&window.jsQR){c.width=480;c.height=480*v.videoHeight/v.videoWidth;x.drawImage(v,0,0,c.width,c.height);
+   const r=jsQR(x.getImageData(0,0,c.width,c.height).data,c.width,c.height);
+   if(r){const id=(r.data.split('#')[1]||r.data).trim();if(D.some(d=>d.id==id)){scanning=0;openAR(id);return}}}
+  requestAnimationFrame(tick)})();
+}
+
+function lst(){
+ $('ch').innerHTML=['Semua','Buah','Sayur'].map(f=>`<button class="${f==flt?'on':''}" onclick="flt='${f}';lst()">${f} ${f=='Semua'?40:20}</button>`).join('');
+ const L=D.filter(d=>(flt=='Semua'||d.t==flt)&&d.n.toLowerCase().includes(q));
+ $('gl').innerHTML=L.map(d=>`<button class="it" onclick="openAR('${d.id}')"><i style="background:${d.c}"></i>${d.n}</button>`).join('');
+ $('lc').textContent=`Menampilkan ${L.length} dari 40 jenis. Ketuk satu jenis untuk mencoba AR.`;
+}
+function cards(){
+ const b=location.href.split('#')[0];
+ $('cg').innerHTML=D.map(d=>{const z=qrcode(0,'M');z.addData(b+'#'+d.id);z.make();
+  return`<div class="cd"><b>No. ${String(d.i).padStart(2,'0')} ${d.t}</b><div class="q">${z.createSvgTag(4,16)}</div><h3>${d.n}</h3><i>${d.sc}</i><small>Scan dengan Kenali Buah dan Sayur Lokal. Kartu ${d.i} dari 40</small></div>`}).join('');
+}
+
+// ---------- 3D ----------
+function mk(it,cutx){
+ const g=new THREE.Group(),m=new THREE.MeshStandardMaterial({color:it.c,roughness:.5,side:2}),s={s:[1,1,1],t:[.8,1.15,.8],l:[1.3,.85,.85]}[it.sh];
+ const add=(geo,f)=>{const o=new THREE.Mesh(geo,m);f&&f(o);g.add(o);return o};
+ if(s){
+  const SG=a=>new THREE.SphereGeometry(.7,32,24,0,6.2832,0,a);
+  if(!cutx){add(SG(3.1416),o=>o.scale.set(...s));
+   const st=add(new THREE.CylinderGeometry(.03,.045,.2),o=>o.position.y=.7*s[1]);st.material=new THREE.MeshStandardMaterial({color:0x3a8a3a})}
+  else[1,-1].forEach(d=>{const p=new THREE.Group(),h=new THREE.Mesh(SG(1.5708),m);h.scale.set(...s);
+   const c=new THREE.Mesh(new THREE.CircleGeometry(.7,32),new THREE.MeshStandardMaterial({color:new THREE.Color(it.c).lerp(new THREE.Color(0xffffff),.6),side:2}));
+   c.rotation.x=1.5708;c.scale.set(s[0],s[2],1);p.add(h,c);p.position.y=d*.1;p.rotation.x=d>0?0:3.1416;g.add(p)});
+ }else{
+  const geo=it.sh=='c'?new THREE.ConeGeometry(.28,1.7,24):it.sh=='b'?new THREE.TorusGeometry(.8,.17,12,40,2.2):new THREE.CylinderGeometry(.24,.24,1.6,20);
+  (cutx?[-.55,.55]:[0]).forEach(x=>add(geo,o=>{o.position.x=x;o.rotation.z=it.sh=='c'?-1.5708:it.sh=='y'?1.5708:.7;cutx&&o.scale.setScalar(.6)}));
+ }
+ return g;
+}
+function setG(){const o=G;G=mk(item,cut);if(o){G.position.copy(o.position);G.rotation.copy(o.rotation);G.scale.copy(o.scale);G.visible=o.visible;S.remove(o)}else G.rotation.x=.3;S.add(G)}
+function init3(){
+ R=new THREE.WebGLRenderer({canvas:$('cnv'),alpha:true,antialias:true});R.setPixelRatio(Math.min(devicePixelRatio,2));
+ S=new THREE.Scene();C=new THREE.PerspectiveCamera(50,1,.01,50);C.position.z=5;
+ S.add(new THREE.HemisphereLight(0xffffff,0x556655,1.1));const d=new THREE.DirectionalLight(0xffffff,1.2);d.position.set(2,4,3);S.add(d);
+ reticle=new THREE.Mesh(new THREE.RingGeometry(.12,.16,32).rotateX(-1.5708),new THREE.MeshBasicMaterial({color:0xf48c25}));
+ reticle.matrixAutoUpdate=false;reticle.visible=false;S.add(reticle);
+ R.setAnimationLoop((t,f)=>{
+  if(!G||(cur!='ar'&&!xrOn))return;
+  if(f&&hts){const h=f.getHitTestResults(hts);if(h.length){reticle.visible=true;reticle.matrix.fromArray(h[0].getPose(R.xr.getReferenceSpace()).transform.matrix)}else reticle.visible=false}
+  R.render(S,C)});
+ addEventListener('resize',fit);
+ const cv=$('cnv');
+ cv.onpointerdown=e=>{dn=1;lx=e.clientX;ly=e.clientY;cv.setPointerCapture(e.pointerId);if(mode=='cut'&&G){cut=!cut;setG()}};
+ cv.onpointermove=e=>{if(!dn||!G)return;
+  if(mode=='rot'){G.rotation.y+=(e.clientX-lx)*.012;G.rotation.x+=(e.clientY-ly)*.012}
+  else if(mode=='drag'){const r=cv.getBoundingClientRect(),h=Math.tan(.4363)*5;G.position.set(((e.clientX-r.left)/r.width*2-1)*h*C.aspect,-((e.clientY-r.top)/r.height*2-1)*h,0)}
+  lx=e.clientX;ly=e.clientY};
+ cv.onpointerup=e=>{if(!dn)return;dn=0;if(mode!='drag')return;const b=$('bk').getBoundingClientRect();
+  if(e.clientX>b.left&&e.clientX<b.right&&e.clientY>b.top&&e.clientY<b.bottom){cnt=Math.min(cnt+1,5);$('cnt').textContent=cnt+' / 5';G.position.set(0,0,0);hint(cnt>=5?'Keranjang penuh! Ketuk Lihat Info':H.drag)}};
+ Q('.tools button').forEach(b=>b.onclick=()=>{mode=b.dataset.m;Q('.tools button').forEach(x=>x.classList.toggle('on',x==b));hint(H[mode])});
+}
+function fit(){if(!R||xrOn)return;const a=$('ar'),w=a.clientWidth,h=a.clientHeight;if(!w)return;R.setSize(w,h,false);C.aspect=w/h;C.updateProjectionMatrix()}
+function openAR(id){
+ item=D.find(d=>d.id==id);cnt=0;cut=false;mode='drag';if(!R)init3();
+ $('cnt').textContent='0 / 5';$('atl').textContent=item.n;Q('.tools button').forEach(x=>x.classList.toggle('on',x.dataset.m=='drag'));
+ if(G){S.remove(G);G=0}setG();go('ar');hint(H.drag);
+}
+async function startXR(){
+ try{
+  const s=await navigator.xr.requestSession('immersive-ar',{requiredFeatures:['hit-test'],optionalFeatures:['dom-overlay'],domOverlay:{root:$('ar')}});
+  R.xr.enabled=true;R.xr.setReferenceSpaceType('local');await R.xr.setSession(s);xrS=s;
+  hts=await s.requestHitTestSource({space:await s.requestReferenceSpace('viewer')});xrOn=true;stopCam();G.visible=false;
+  hint('Arahkan HP ke meja atau lantai, lalu ketuk untuk menaruh '+item.n.toLowerCase());
+  s.addEventListener('select',()=>{if(reticle.visible){G.position.setFromMatrixPosition(reticle.matrix);G.scale.setScalar(.15);G.visible=true}});
+  s.addEventListener('end',()=>{xrOn=false;xrS=null;hts=null;R.xr.enabled=false;G.position.set(0,0,0);G.scale.setScalar(1);G.visible=true;reticle.visible=false;fit();if(cur=='ar')startCam($('av'))})
+ }catch(e){hint('WebXR tidak bisa dibuka di sini. Pakai Chrome di Android yang mendukung ARCore.')}
+}
+
+// ---------- info & kuis ----------
+function info(){
+ const d=item;$('ih').textContent='Info '+d.t;
+ $('inf').innerHTML=`<div class="big" style="background:${d.c}"></div><h1 style="text-align:center;font-size:34px">${d.n}</h1><p style="text-align:center;margin:0"><em>${d.sc}</em></p>
+ <div class="r"><span>Jenis</span><b>${d.t}</b></div><div class="r"><span>Asal</span><b>${d.o}</b></div><div class="r"><span>Kandungan</span><b>${d.k}</b></div>
+ <div class="fx" style="margin:14px 0"><b>Tahukah kamu?</b> ${d.n} adalah kartu nomor ${d.i} dari 40. Kandungan utamanya: ${d.k.toLowerCase()}.</div>
+ <button class="b gn" onclick="quiz()">Coba Kuis</button>`;
+ go('info');
+}
+const sh=a=>a.sort(()=>Math.random()-.5),pk=(f,n)=>sh(D.filter(f)).slice(0,n);
+function quiz(){
+ const d=item,o=pk(x=>x.t!=d.t,2),p=[...new Set(pk(x=>x.o!=d.o,6).map(x=>x.o))].slice(0,2);
+ qs=[{q:`Manakah yang termasuk ${d.t.toLowerCase()}?`,a:d.n,o:[d.n,...o.map(x=>x.n)]},{q:`Dari mana asal ${d.n}?`,a:d.o,o:[d.o,...p]}];
+ qi=0;sc=0;go('quiz',cur=='done'?1:0);qz();
+}
+function qz(){
+ const n=qs[qi];qo=sh([...n.o]);
+ $('qn').textContent=`Pertanyaan ${qi+1} dari 2`;$('qs').textContent='Skor: '+sc;$('qb').style.width=(qi+1)*50+'%';$('qq').textContent=n.q;
+ $('qo').innerHTML=qo.map((t,i)=>`<button class="op" onclick="ans(${i})"><b style="margin-right:10px">${'ABC'[i]}</b>${t}</button>`).join('');
+}
+function ans(i){
+ const n=qs[qi];if(qo[i]==n.a)sc++;
+ Q('#qo .op').forEach((b,j)=>{b.disabled=1;if(qo[j]==n.a)b.classList.add('ok');else if(j==i)b.classList.add('no')});
+ setTimeout(()=>{if(++qi<2)qz();else{$('sk').textContent=sc;$('sj').textContent=sc+' jawaban benar';go('done')}},900);
+}
+
+// kartu QR dibuka langsung di AR
+function hs(){const id=location.hash.slice(1);if(D.some(d=>d.id==id))openAR(id)}
+addEventListener('hashchange',hs);hs();
+</script></body></html>
